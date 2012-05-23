@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="ui-mobile-rendering">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Apigee Usergrid Demo</title>      
+		<link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+
+        <!-- Login Page Template -->
+        <script type="text/template" id="login">
+            <div data-role="header">
+                <h1>Apigee Usergrid Demo</h1>
+            </div>
+            <div data-role="content">
+                <h3>This sample app illustrates how to integrate Apigee Usergrid with Backbone.js and JQuery Mobile</h3>
+                <form name="login-form" id="login-form" class="form-horizontal">
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" value="" placeholder="Username"/>
+                    </div>
+                </form>
+                <button type="submit" data-theme="b" data-mini="true" aria-disabled="false" id="loginClientSecret">Let's go!</button>
+                <b>Learn more:</b><br />
+                <a href="http://apigee.com/about/products/usergrid">About Apigee Usergrid</a>
+                <br /><br />
+                <b>Ask Questions:</b><br />
+                <a href="mailto:usergrid@apigee.coms">usergrid@apigee.com</a>
+                <br /><br />
+                <b>Get the code:</b><br />
+                <a href="https://github.com/apigee/Usergrid-Backbone-Sample">On Github</a>
+            </div>
+        </script>
+
+        <!-- Messages Page Template -->
+        <script type="text/template" id="messages">
+            <div data-role="header">            
+                <h1>Apigee Usergrid Demo</h1>
+            </div>
+            <button type="submit" data-theme="b" data-mini="true" aria-disabled="false" id="gotopostmessage">Post Message</button>
+            <button type="submit" data-theme="b" data-mini="true" aria-disabled="false" id="logout">Log out</button>
+            <div data-role="content" id="messages-holder">
+                No Messages yet... <a href="#postmessage">Post</a> one now!!
+            </div>
+            
+        </script>
+
+        <!-- Post Message Page Template -->
+        <script type="text/template" id="postmessage">
+            <div data-role="header">               
+                <h1>Apigee Usergrid Demo</h1>
+            </div>
+            <div data-role="content">
+                <h3>Compose your message below (140 chars or less)</h3>
+                <form name="follow-form" id="follow-form" class="form-horizontal">
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="message">Message:</label>
+                        <textarea rows="2" cols="20" name="message" id="message" value="" placeholder="Message"/>
+                    </div>                    
+                </form>
+                <button type="submit" data-theme="b" data-mini="true" aria-disabled="false" id="actionpostmessage">Post Message</button>
+                <button type="submit" data-theme="b" data-mini="true" aria-disabled="false" id="actioncancel">Cancel</button>
+            </div>            
+        </script>
+
+        <script src="app/lib/cordova-1.7.0.js"></script>
+        <script src="app/lib/jquery-1.7.1.min.js"></script>
+        <script src="app/jqm-config.js"></script><!-- must load after jquery before jquery mobile -->
+		<script src="app/lib/jquery.mobile-1.0.1.min.js"></script>
+        <script src="app/lib/underscore-min.js"></script>
+        <script src="app/lib/backbone-min.js"></script>
+        <script src="app/usergrid-config.js"></script>
+        <script src="app/views/usergridLoginView.js"></script>
+        <script src="app/views/messagesView.js"></script>
+        <script src="app/models/usergridLoginModel.js"></script>
+        <script src="app/models/messageModel.js"></script>
+        <script src="app/lib/date.format.js"></script>
+        <script src="app/main.js"></script>
+	</head>
+	<body>
+	</body>
+</html>

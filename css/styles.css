@@ -1,0 +1,18 @@
+/* 
+    Document   : styles
+    Created on : May 22, 2012, 11:11:25 PM
+    Author     : rodericksimpson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.message {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    border: 1px solid #999;
+    background-color: #ccc;
+    padding: 5px;
+}
+
